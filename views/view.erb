@@ -1,0 +1,35 @@
+<html>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+
+<section>
+<h1 class='card'>Welcome to <a href="/">Sinatra Task Manager.</a></h1>
+</section>
+
+<section class='rounded-corners'>
+  <h3>Add new task</h3>
+
+  <form method='post' action='/add'>
+    <input type='text' name='name' placeholder='Task name?'>
+    <textarea name='description' placeholder='Task description'></textarea>
+    <button type='submit' class='btn'>Add Task</button>
+  </form>
+</section>
+
+<% if tasks.any? %>
+  <section>
+  <h3>Tasks</h3>
+  <% tasks.to_a.each do |task| %>
+    <article class='rounded-corners' style='border: 1px solid lightblue; padding: 20px; margin-bottom: 10px'>
+      <b><%= task['name'] %></b>
+      <span><%= task['description'] %></span>
+      <small><a href="/delete?name=<%= task['name'] %>" style='float: right'>(delete)</a></small>
+    </article>
+  <% end %>
+  </section>
+<% end %>
+
+</body>
+</html>
