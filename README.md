@@ -6,4 +6,10 @@ You should have preliminary understanding of web development ("what is HTML", "w
 
 # Run the app
 You run the app via 
-    `shotgun app.rb`
+
+````$ shotgun app.rb````
+
+Play around with it - there's not much to do. Add a task with a name & description, remove the task, hey presto. 
+
+# Learn by changing 
+1. Change the app header to include your name ("Welcome to Joe's TODO Manager").
