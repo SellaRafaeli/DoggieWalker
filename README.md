@@ -1,8 +1,8 @@
-This is a minimalistic yet complete web-app for a TODO list meant for learning purposes, to demonstrate the basics of web development. 
+This is a minimalistic yet complete web-app for a TODO list meant for learning purposes, to demonstrate the basics of web development. Releaseed under a general BSD license.
 
 # Prerequisites 
 
-You should have preliminary understanding of web development ("what is HTML", "what is a variable"). You should have Ruby and Mongo installed. If you know basic, basic Ruby - that would help. 
+You should have preliminary understanding of web development ("what is HTML", "what is a variable"). You should have Ruby and Mongo installed. If you know basic, basic Ruby - that would help. This is best administered with the help of a knowledgable coach / mentor, but can be learned alone too, 
 
 # Run the app
 You run the app via 
@@ -76,3 +76,19 @@ This has been a massive step, including various steps. Make sure you understand 
 * Params hash
 * ERB injecting dynamic content into HTML ("<%= Time.now %>")
 * ERB control flows ("<% if 1 >2 ... %>")
+
+2. So, back to our `views.erb` file. Right at the end, before the closing `</body>` tag, we notice we call yet another `erb` function, to display `tasks_list`. This mechanism is often referred to as using `partials`, in the sense that we separate our view into separate pieces. It mostly makes for better code management. In this case, we dynamically inject the `erb` call, as we have just seen. We also pass on our tasks variable, so we can use it in the `tasks_list` partial. Let us explore that partial - observe `tasks_list.erb`.
+
+3. Within `tasks_list.erb` we see several advanced erb control flows:
+* A condition on whether or not to display the whole thing (`if tasks.any?`). This determines whether the bottom block is displayed -- if there are no tasks, it isn't (try it yourself).
+* An *iteration* through the tasks (`<% tasks.to_a.each do |task| %>`... `<% end %>`), which outputs for each task dynamic content, including injecting the `<%= task['name'] %>`. 
+* Give special attention to how the task name is injected twice - once for display, and once for the link for deletion. Let's dig deeper into this one. 
+
+4. Create a task called 'buy_milk'. Observe how, as expected, a task with that name was created and displayed. (Go through the erb file of task_list and make sure you understand how each HTML element was created). Hover over the 'delete' link of that task to see the link it points to: '/delete?name=buy_milk'. Let's examine this link. What will happen if we press it?
+
+5. Entering a URL - such as '/delete?name=buy_milk' - trigger a GET request to the server for that URL ('/delete') with the params hash ({name: buy_milk}). In Sinatra this is handled by the appropriate route handler -- in this case get '/delete'. In `app.rb` we observe we have exactly this route. What will happen if we call this route? We can see the order of events within '/delete' - we will call "$tasks.remove", instructing the DB to delete the task with the 'name' whose value is in params[:name]. In other words, if we call '/delete?name=buy_milk', we will call 'remove' on the task with the 'name' of 'buy_milk'. Thus, the dynamic link created by `tasks_list.erb` matches the route that deletes the appropriate link when invoked. 
+
+# Future lessons (stuff you should know but we haven't covered)
+* Using a breakpoint by entering "binding.pry" anywhere in the application.
+* Understanding Mongo 
+* 'requiring' files 
