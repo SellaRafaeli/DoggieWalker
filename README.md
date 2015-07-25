@@ -1,5 +1,7 @@
 A tiny, complete web-app for a TODO list meant for learning purposes, to demonstrate the basics of web development. Releaseed under a general BSD license.
 
+![](http://wecanbeaoriginal.com/blog/wp-content/uploads/2010/11/Terrier.jpg =100px)
+
 # Prerequisites 
 
 You should have preliminary understanding of web development ("what is HTML", "what is a variable"). You should have Ruby and Mongo and bundler installed. If you know basic, basic Ruby - that would help. This is best administered with the help of a knowledgable coach / mentor, but can be learned alone too, 
