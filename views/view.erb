@@ -5,7 +5,12 @@
 <body>
 
 <section>
-<h1>Welcome to <a href="/">Sinatra TODO List Manager.</a></h1>
+<h1> Welcome to <a href="/">Sinatra TODO List Manager.</a></h1>
+<% if params[:num].to_i > 10 %>
+"You entered a number greater than 10"
+<% else %>
+"Less than 10"
+<% end %>
 </section>
 
 <section class='rounded-corners'>
