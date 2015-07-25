@@ -1,6 +1,6 @@
 A tiny, complete web-app for a TODO list meant for learning purposes, to demonstrate the basics of web development. Releaseed under a general BSD license.
 
-![](http://wecanbeaoriginal.com/blog/wp-content/uploads/2010/11/Terrier.jpg =100px)
+![](http://wecanbeaoriginal.com/blog/wp-content/uploads/2010/11/Terrier.jpg)
 
 # Prerequisites 
 
