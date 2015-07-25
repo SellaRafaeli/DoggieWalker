@@ -1,8 +1,8 @@
-This is a minimalistic yet complete web-app for a TODO list meant for learning purposes, to demonstrate the basics of web development. Releaseed under a general BSD license.
+A tiny, complete web-app for a TODO list meant for learning purposes, to demonstrate the basics of web development. Releaseed under a general BSD license.
 
 # Prerequisites 
 
-You should have preliminary understanding of web development ("what is HTML", "what is a variable"). You should have Ruby and Mongo installed. If you know basic, basic Ruby - that would help. This is best administered with the help of a knowledgable coach / mentor, but can be learned alone too, 
+You should have preliminary understanding of web development ("what is HTML", "what is a variable"). You should have Ruby and Mongo and bundler installed. If you know basic, basic Ruby - that would help. This is best administered with the help of a knowledgable coach / mentor, but can be learned alone too, 
 
 # Run the app
 You run the app via 
@@ -14,7 +14,7 @@ Play around with it - there's not much to do. Add a task with a name & descripti
 
 # Learn by doing stuff and reading 
 
-## Level 1
+## Level 1 - Basic modifications to HTML and Ruby
 
 1. Change the app header to include your name ("Welcome to Joe's TODO Manager").
 2. Change the reference to the stylesheet in the HTML from 'style.css' to 'mystyle.css'. See the style fail to load and notice the design break; now change the file's name accordingly to 'mystyle.css' and the design re-applied. 
@@ -28,7 +28,7 @@ Play around with it - there's not much to do. Add a task with a name & descripti
 91. Within tasks_list.erb, change the title 'tasks' to 'my tasks'. Note how that part of the view changes. 
 10. Change the 'erb: tasks_list' to reference a separate file (e.g. 'erb: my_tasks_list').  Note the app now crashes (missing reference to sub-view). Change the name of the file (tasks_list.erb) accordingly (e.g. to 'my_tasks_list.erb') and see the change reflect accordingly. 
 
-## Level 2 
+## Level 2 - Basic ERB 
 
 1. You've understood by now that the file 'view.erb' is the view that is displayed in the browser. What causes this? It is caused by the command `erb :view`. Test this by changing the rendered view to 'main_view' (i.e. change "erb :view" to "erb :main_view"). See that the site now breaks. Rename the file 'view.erb' to 'main_view.erb' to fix it.
 2. Notice 'view_tasks' is called from each route handler (e.g. "get '/'") in order to return the view. Remember that in Ruby, the last expression in a function is implicitly the returned value, even if no 'return' is written. Thus within the 'view_tasks' function, the result of 'erb :views' (which is the rendered 'view.erb' HTML contents) is the value returned to the client (the browser).  
@@ -53,7 +53,8 @@ Play around with it - there's not much to do. Add a task with a name & descripti
 ````
 Run the page and see that 'hola' is displayed, and not 'hello'. Do you understand why? Take your time to slowly run through this concept. Try replacing '1 > 2' with '2 > 1' to see the results. 
 
-## Level 3 
+## Level 3 - Advanced ERB
+
 1. Now we're moving into more advanced topics, and we'll learn about 'params' - the parameters whih the browser passes to the server when making a request. Instead of the above code with 'hola' and 'hello', add the following code right below the welcome message. 
  ````
 <% if params[:num].to_i > 10 %>
@@ -88,7 +89,7 @@ This has been a massive step, including various steps. Make sure you understand 
 
 5. Entering a URL - such as '/delete?name=buy_milk' - trigger a GET request to the server for that URL ('/delete') with the params hash ({name: buy_milk}). In Sinatra this is handled by the appropriate route handler -- in this case get '/delete'. In `app.rb` we observe we have exactly this route. What will happen if we call this route? We can see the order of events within '/delete' - we will call "$tasks.remove", instructing the DB to delete the task with the 'name' whose value is in params[:name]. In other words, if we call '/delete?name=buy_milk', we will call 'remove' on the task with the 'name' of 'buy_milk'. Thus, the dynamic link created by `tasks_list.erb` matches the route that deletes the appropriate link when invoked. 
 
-# Future lessons (stuff you should know but we haven't covered)
+## Future lessons (stuff you should know but we haven't covered)
 * Using a breakpoint by entering "binding.pry" anywhere in the application.
 * Understanding Mongo 
 * 'requiring' files 
