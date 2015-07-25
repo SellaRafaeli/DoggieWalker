@@ -6,4 +6,4 @@ You should have preliminary understanding of web development ("what is HTML", "w
 
 # Run the app
 You run the app via 
-    shotgun app.rb
+    `shotgun app.rb`
