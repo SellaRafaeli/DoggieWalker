@@ -1,6 +1,5 @@
-require 'sinatra'
-require 'erb'
-require 'mongo'
+#require 'bundler'
+Bundler.require
 
 #db
 $mongo = Mongo::MongoClient.from_uri('mongodb://localhost:27017').db('rails_girls')
@@ -16,7 +15,7 @@ get '/' do
 end
 
 post '/add' do
-  $tasks.insert(params)  
+  $tasks.insert(name: params[:name], description: params[:description])  
   view_tasks
 end
 
