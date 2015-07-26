@@ -1,9 +1,13 @@
 A **tiny** web app with a **massive** tutorial to help smart semi-beginners learn Ruby web dev. Released under a general BSD license.
 
+![](http://i.imgur.com/rDNkszO.png)
+
 # Setup 
 
 ## Prerequisites
-You should have preliminary understanding of web development ("what is HTML", "what is a variable"). You should have Ruby and Mongo and bundler installed. If you know basic, basic Ruby - that would help. This is best administered with the help of a knowledgable coach / mentor, but can be learned alone too. 
+You should have preliminary understanding of web development ("what is HTML", "what is a variable"). You should have Ruby and Mongo and bundler installed. If you know basic, basic Ruby - that would help. 
+
+This tutorial best administered with the help of a knowledgable coach / mentor, but can be learned alone too. 
 
 ## Installation 
 * Install prerequisites. 
@@ -182,3 +186,6 @@ This is a powerful mechanism of inspecting the request as it happens.
 * 'requiring' files 
 * javascript 
 * Gemfile
+* Chrome dev tools
+* favicon
+* sleep and threads 
