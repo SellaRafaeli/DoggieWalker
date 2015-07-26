@@ -2,6 +2,10 @@
 
 ![](http://i.imgur.com/rDNkszO.png)
 
+## Concept 
+
+The concept behind DoggieWalker is to give an aspiring web developer a complete web-app which is both working and minimal, such that s/he can walk through and understand (with the help of this tutorial) every single line in the app, as well as the underlying technical principles of modern web development. Guided by a working app and the tutorial, the novice developer can tweak each and every part of the application and gradually modify it, thereby learning the ins and out of dynamic web development quickly.
+
 ## Prerequisites
 You should have preliminary understanding of web development ("what is HTML", "what is a variable"). You should have Ruby and Mongo and bundler installed. If you know basic, basic Ruby - that would help. 
 
