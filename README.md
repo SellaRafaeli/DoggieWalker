@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+  - [](#)
+- [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Run the app](#run-the-app)
+  - [Level 4 - tux console](#level-4---tux-console)
+  - [Level 5 - The HTTP request/response cycle](#level-5---the-http-requestresponse-cycle)
+  - [Level 6 - our own functions](#level-6---our-own-functions)
+  - [Level 7 - debugging with breakpoints](#level-7---debugging-with-breakpoints)
+  - [Future lessons (stuff you should know but we haven't covered)](#future-lessons-stuff-you-should-know-but-we-havent-covered)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 A **tiny** web app with a **massive** tutorial (this file) to help new programmers learn Ruby web dev. Released under a general BSD license.
 
 ![](http://i.imgur.com/rDNkszO.png)
