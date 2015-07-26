@@ -1,25 +1,6 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-  - [](#)
-- [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Run the app](#run-the-app)
-  - [Level 4 - tux console](#level-4---tux-console)
-  - [Level 5 - The HTTP request/response cycle](#level-5---the-http-requestresponse-cycle)
-  - [Level 6 - our own functions](#level-6---our-own-functions)
-  - [Level 7 - debugging with breakpoints](#level-7---debugging-with-breakpoints)
-  - [Future lessons (stuff you should know but we haven't covered)](#future-lessons-stuff-you-should-know-but-we-havent-covered)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-A **tiny** web app with a **massive** tutorial (this file) to help new programmers learn Ruby web dev. Released under a general BSD license.
+**DoggieWalker** is a **tiny** web app with a **massive** tutorial (this file) to help new programmers learn Ruby web dev. Released under a general BSD license.
 
 ![](http://i.imgur.com/rDNkszO.png)
-
-# Setup 
 
 ## Prerequisites
 You should have preliminary understanding of web development ("what is HTML", "what is a variable"). You should have Ruby and Mongo and bundler installed. If you know basic, basic Ruby - that would help. 
@@ -42,9 +23,6 @@ Any changes you make to the source code should reflect immediately when refreshi
 
 ## Play around 
 Play around with it - there's not much to do. Add a task with a name & description, remove the task, hey presto. Go through each file (there are 4 code files, 1 list of packages, and this file) and understand each file's role. We'll be changing these files. 
-
-
-# Learn by doing stuff and reading 
 
 ## Level 1 - Basic modifications to HTML and Ruby
 
