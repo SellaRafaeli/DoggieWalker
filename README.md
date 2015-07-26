@@ -1,14 +1,15 @@
-A **tiny** web app with a **massive** tutorial to help smart semi-beginners learn Ruby web dev.Released under a general BSD license.
+A **tiny** web app with a **massive** tutorial to help smart semi-beginners learn Ruby web dev. Released under a general BSD license.
 
 # Setup 
 
 ## Prerequisites
-You should have preliminary understanding of web development ("what is HTML", "what is a variable"). You should have Ruby and Mongo and bundler installed. If you know basic, basic Ruby - that would help. This is best administered with the help of a knowledgable coach / mentor, but can be learned alone too, 
+You should have preliminary understanding of web development ("what is HTML", "what is a variable"). You should have Ruby and Mongo and bundler installed. If you know basic, basic Ruby - that would help. This is best administered with the help of a knowledgable coach / mentor, but can be learned alone too. 
 
 ## Installation 
 * Install prerequisites. 
 * $ git clone this project
 * $ cd doggieWalker
+* $ bundle install
 * $ shotgun app.rb 
 
 ## Run the app
@@ -16,7 +17,7 @@ You run the app via
 
 ````$ shotgun app.rb````
 
-Any changes you make to the source code should reflecti immediatel after refreshing the browser page. However you can 'kill' the server and restart it by typing 'Ctrl-C' and 'shotgun app.rb' again in the terminal. 
+Any changes you make to the source code should reflect immediately when refreshing the browser page. However, you can 'kill' the server and restart it by typing 'Ctrl-C' and 'shotgun app.rb' again in the terminal. 
 
 ## Play around 
 Play around with it - there's not much to do. Add a task with a name & description, remove the task, hey presto. Go through each file (there are 4 code files, 1 list of packages, and this file) and understand each file's role. We'll be changing these files. 
@@ -101,7 +102,7 @@ This has been a massive step, including various steps. Make sure you understand 
 
 ## Level 4 - tux console
 
-We will now learn how to use Ruby's 
+We will now learn how to use Ruby's interactive shell. 
 
 1. In your terminal, enter 'irb'. This should display something like `2.2.0 :001 >` - a Ruby prompt. This program is an interactive Ruby ("irb") shell (also referred to sometimes as a *console*). You can run Ruby commands here in order to practice Ruby syntax and semantics. Try your favorite Ruby tutorial online to practice Ruby with this shell. When you're done, leave irb by typing 'exit'. 
 
