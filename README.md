@@ -1,4 +1,4 @@
-A tiny web app for a TODO list meant for learning purposes, to demonstrate the basics of web development. Releaseed under a general BSD license.
+A *tiny* web app with a *massive* tutorial to help smart semi-beginners learn Ruby web dev.Released under a general BSD license.
 
 # Setup 
 
