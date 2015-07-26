@@ -1,4 +1,4 @@
-A **tiny** web app with a **massive** tutorial to help smart semi-beginners learn Ruby web dev. Released under a general BSD license.
+A **tiny** web app with a **massive** tutorial (this file) to help new programmers learn Ruby web dev. Released under a general BSD license.
 
 ![](http://i.imgur.com/rDNkszO.png)
 
