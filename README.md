@@ -13,8 +13,9 @@ If you want to learn programming the good way, let's get to it.
 3. In your terminal, create a folder called 'doggieWalker' by running `mkdir doggieWalker`.
 4. Enter that folder by running `cd doggieWalker`.
 5. In that folder, download this project by running `git clone git@github.com:SellaRafaeli/DoggieWalker.git`. 
-6. Install Ruby software libraries we depend on by typing `bundle install`. 
-7. Run the server by typing `shotgun app.rb`. 
+55. Install 'bundler' by typing `gem install bundler`.
+6. Install Ruby software libraries we depend on by running `bundle install`. 
+7. Run the server by running `shotgun app.rb`. 
 9. In your browser, browse to http://localhost:9393/ and make sure you see the TODO list manager. 
 10. Congratulations - we are up and running. 
 
@@ -189,12 +190,23 @@ We also see the lines around us and a familiar prompt -- this is again an intera
 * `num = params[:num].to_i` (and see the result)
 * `plus2(num).to_s` (and see the result)
 
-This is a powerful mechanism of inspecting the request as it happens. 
+This is a powerful mechanism for inspecting the request as it happens. 
+
+## Intermission
+
+If you've reached this point, you've passed the basics of (web) development. From now on, we're going to go gradually into deeper stuff. It's important to have a good grasp of the basics, so we recommend you re-do all of the above steps once more - repetition is a greaet way of internalizing concepts, and make sure you do indeed internalize each step you perform and understand it. 
+
+Also, give yourself a pat on the back; you've earned it. 
+
+## Mongo (and Databases)
+
+A "Database" is a program that helps us save information to the computer's disk. This information persists even if the program running it (like our app) is turned off, or if the computer itself is turned off. In our case, the database helps us save our list of tasks. 
 
 ## Future lessons (stuff you should know but we haven't covered)
 * Mongo 
 * 'requiring' files in Ruby 
-* javascript 
+* get specific task 
+* JavaScript  
 * Gemfile
 * Chrome dev tools
 * favicon
@@ -211,4 +223,6 @@ This is a powerful mechanism of inspecting the request as it happens.
 
 ## About DoggieWalker
 
-The concept behind DoggieWalker is to give an aspiring web developer a complete web-app which is both working and minimal, such that s/he can walk through and understand (with the help of this tutorial) every single line in the app, as well as the underlying technical principles of modern web development. Guided by a working app and the tutorial, the novice developer can tweak each and every part of the application and gradually modify it, thereby learning the ins and out of dynamic web development quickly.
+The concept behind DoggieWalker is to give an aspiring web developer a complete web-app which is minimal enough that s/he can walk through and understand (with the help of this tutorial) every single line in the app, as well as the underlying technical principles of modern web development. 
+
+Guided by a working app and the tutorial, the novice developer can tweak each and every part of the application and gradually modify it, thereby learning the ins and out of dynamic web development quickly while getting both immediate feedback and gratification. 
