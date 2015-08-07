@@ -200,8 +200,17 @@ Also, give yourself a pat on the back; you've earned it.
 
 ## Mongo (and Databases)
 
-A "Database" is a program that helps us save information to the computer's disk. This information persists even if the program running it (like our app) is turned off, or if the computer itself is turned off. In our case, the database helps us save our list of tasks. 
+A "Database" is a program that helps us save information to the computer's disk. This information persists even if the program running it (like our app) is turned off, or if the computer itself is turned off. In our case, the database helps us manage our tasks. The database we use is called 'Mongo' (or 'MongoDB'), and it's on of the leading databases in the world. 
 
+Mongo is a 'NoSQL' database - it saves 'documents'. So for example, in our database (in Mongo) we might have 3 'documents', each representing a task. Each 'document' has fields and each field has a value. In this example, the first document might have the field 'name' with the value of 'Buy milk' and a description of 'Go the store and buy a jug of milk.' 
+
+We might represent this document as follows:
+{
+  name: 'Buy milk',
+  description: 'Go the store and buy a jug of milk.' 
+}
+
+In addition, each object will have a unique 'id' field. 
 ## Future lessons (stuff you should know but we haven't covered)
 * Mongo 
 * 'requiring' files in Ruby 
