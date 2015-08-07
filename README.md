@@ -1,5 +1,7 @@
 **DoggieWalker** is a project to teach web development. This project includes a simple web app with an in-depth tutorial (this file) to walk you through it and learn web development. 
 
+![](http://i.imgur.com/rDNkszO.png)
+
 Info about this project can be found at the end of this file. 
 
 If you want to learn programming the good way, let's get to it. 
