@@ -19,4 +19,3 @@ get '/delete' do
   $tasks.remove(name: params[:name])
   view_tasks
 end
-

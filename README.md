@@ -1,34 +1,43 @@
-**DoggieWalker** is a **tiny** web app with a **massive** tutorial (this file) to help new programmers learn Ruby web dev. Released under a general BSD license.
+**DoggieWalker** is a project to teach web development. This project includes a simple web app with an in-depth tutorial (this file) to walk you through it and learn web development. 
 
-![](http://i.imgur.com/rDNkszO.png)
+Info about this project can be found at the end of this file. 
 
-## Concept 
+If you want to learn programming the good way, let's get to it. 
 
-The concept behind DoggieWalker is to give an aspiring web developer a complete web-app which is both working and minimal, such that s/he can walk through and understand (with the help of this tutorial) every single line in the app, as well as the underlying technical principles of modern web development. Guided by a working app and the tutorial, the novice developer can tweak each and every part of the application and gradually modify it, thereby learning the ins and out of dynamic web development quickly.
+##  Setup 
 
-## Prerequisites
-You should have preliminary understanding of web development ("what is HTML", "what is a variable"). You should have Ruby and Mongo and bundler installed. If you know basic, basic Ruby - that would help. 
+1. Learn to open your terminal. 
+2. Install Ruby, mongo, and git on your computer.
+3. In your terminal, create folder called 'doggieWalker' by running `mkdir doggieWalker`.
+4. Enter that folder by running `cd doggieWalker`.
+5. In that folder, download this project by running `git clone git@github.com:SellaRafaeli/DoggieWalker.git`. 
+6. Install Ruby software libraries we depend on by typing `bundle install`. 
+7. Run the server by typing `shotgun app.rb`. 
+9. In your browser, browse to http://localhost:9393/ and make sure you see the TODO list manager. 
+10. Congratulations - we are up and running. 
 
-This tutorial best administered with the help of a knowledgable coach / mentor, but can be learned alone too. 
-
-## Installation 
-* Install prerequisites. 
-* $ git clone this project
-* $ cd doggieWalker
-* $ bundle install
-* $ shotgun app.rb 
-
-## Run the app
-You run the app via 
+## Running the app
+As you just saw, you run the app by typing the following in your terminal. 
 
 ````$ shotgun app.rb````
 
-Any changes you make to the source code should reflect immediately when refreshing the browser page. However, you can 'kill' the server and restart it by typing 'Ctrl-C' and 'shotgun app.rb' again in the terminal. 
+You can 'kill' the server by typing 'Ctrl-C' in the terminal, and restart it by entering 'shotgun app.rb' again in the terminal. Try it. 
 
 ## Play around 
-Play around with it - there's not much to do. Add a task with a name & description, remove the task, hey presto. Go through each file (there are 4 code files, 1 list of packages, and this file) and understand each file's role. We'll be changing these files. 
+
+Play around with the app in your browser - there's not that much to do. Add a task with a name & description, remove the task, hey presto.
+
+## View the source code
+
+The app's code is in the doggieWalker directory (this project). It's just a few short text files. Go through each file (there should be 8 files including this one) and understand each file's role. We'll be changing these files and learning how they define our app. Make sure you can edit these files with some text editor, such as Notepad or Notepad++ or Sublime Text. You can download each of these from the web. 
+
+## Edit the source code
+
+We'll go through the files and make modifications to the files. After we change a file and save it, we'll go back to our web page (http://localhost:9393) in the browser and reload the page. We'll see how the changes we make to the text files affect the app. 
 
 ## Level 1 - Basic modifications to HTML and Ruby
+
+We will start with the file 'view.erb' which contains the HTML, which is what is displayed in our browser. After each step, reload the page and make sure you understand the effect of the changes made. 
 
 1. Change the app header to include your name ("Welcome to Joe's TODO Manager").
 2. Change the reference to the stylesheet in the HTML from 'style.css' to 'mystyle.css'. See the style fail to load and notice the design break; now change the file's name accordingly to 'mystyle.css' and the design re-applied. 
@@ -182,9 +191,22 @@ This is a powerful mechanism of inspecting the request as it happens.
 
 ## Future lessons (stuff you should know but we haven't covered)
 * Mongo 
-* 'requiring' files 
+* 'requiring' files in Ruby 
 * javascript 
 * Gemfile
 * Chrome dev tools
 * favicon
 * sleep and threads 
+
+## Addendums 
+
+#### Verifying Installations of Ruby, Mongo, Git
+
+* Ruby is a programming language. Verify Ruby is installed by running `irb` in your terminal. You should see a `ruby prompt` that looks something like `2.2.1 :001 >`. We'll learn more about this later. Type 'exit' in the prompt to close it. 
+* Mongo is a database. Verify Mongo is installed by running `mongo` in your terminal. You should see a `mongo prompt` that looks something like `>`. We'll learn more about this later. Type 'exit' in the prompt to close it.`
+* Git is a source-control tool. Verify git is installed by typing `git version` in your terminal. You should see something like `git version 2.3.5`. We'll learn more about this later. 
+
+
+## About DoggieWalker
+
+The concept behind DoggieWalker is to give an aspiring web developer a complete web-app which is both working and minimal, such that s/he can walk through and understand (with the help of this tutorial) every single line in the app, as well as the underlying technical principles of modern web development. Guided by a working app and the tutorial, the novice developer can tweak each and every part of the application and gradually modify it, thereby learning the ins and out of dynamic web development quickly.
