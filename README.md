@@ -1,4 +1,4 @@
-**DoggieWalker** is a project to teach web development. This project includes a simple web app with an in-depth tutorial (this file) to walk you through it and learn web development. 
+**DoggieWalker** is a project to teach web development. This project includes a simple web app with an in-depth tutorial (this file) to walk you through it and learn web development. You can see the app here: http://doggie-walker.herokuapp.com/. 
 
 ![](http://i.imgur.com/rDNkszO.png)
 
@@ -205,21 +205,56 @@ A "Database" is a program that helps us save information to the computer's disk.
 Mongo is a 'NoSQL' database - it saves 'documents'. So for example, in our database (in Mongo) we might have 3 'documents', each representing a task. Each 'document' has fields and each field has a value. In this example, the first document might have the field 'name' with the value of 'Buy milk' and a description of 'Go the store and buy a jug of milk.' 
 
 We might represent this document as follows:
+
+````
 {
   name: 'Buy milk',
   description: 'Go the store and buy a jug of milk.' 
 }
+````
 
-In addition, each object will have a unique 'id' field. 
+In addition, each object will have a unique 'id' field. So a full document in MongoDB might look something like: 
+
+````
+
+{
+  _id: '9038409138',
+  name: 'Buy milk',
+  description: 'Go the store and buy a jug of milk.' 
+}
+
+````
+
+Awesomeness. 
+
+* The database (or simply 'Mongo') is divided into 'collections' of documents. For example one collection might be a collection of 'tasks'. We can see this in the `setup.rb` file, in the line `$tasks = $mongo.collection('tasks')`. 
+* Mongo allows us to interact with the data in various ways. One common **use-case** might be to ask for a specific task from the DB, so we can view its details. We might ask for that task by its id, or by its name. Other use cases might be to ask the DB 'how many tasks do we have?', or to ask to it remove a specific task. 
+
+### Interacting with the DB (Mongo) via Tux
+
+Using tux, we can interact with the DB and learn a great lot about its working. Let's open up tux again (tux -c app.rb). We saw our `collection` of tasks is defined by `$tasks`. Thus we can run `$tasks.count` and see the number of tasks in the DB. Try adding and removing tasks via the web interface, and see how this number changes. Experiment with the following commands:
+* `$tasks.remove` - remove all the tasks from the DB
+* `$tasks.remove({name: 'hello'})` - remove the task with the attribute 'name' with the value 'hello'. 
+* `$tasks.find.to_a` - this finds all the tasks, and lists them as an array of documents. 
+* `$tasks.insert({name: 'buy milk', description: 'buy 3 bottles of milk'})` 
+* `$tasks.find_one({name: 'buy milk'})`
+
+Since the app and the console reflect the same DB, any changes you make in one will be reflected in the other. 
+
+## The Gemfile
+
+The Gemfile - which is a file called `Gemfile` - is a file that contains a list of external Ruby projects (referred to as `gems`.) that we use. In our case we have `gems` for Sinatra, Mongo, Tux, and more. Most Ruby projects have a gemfile - this is part of the beauty of open source; other people (often private individuals) create `gems` and publish them to the world for free. In turn, we can then install these gems and use their functionality in our project for free. Gems are installed using the command `bundle install` (which in turn invokes a gem called `Bundler`, which we previously installed). Running `bundle install` creates a file called `Gemfile.lock`. The Gemfile.lock represents a resolved lists of the dependency tree of the gems - for now, you should not worry about understanding this too deeply.
+
+## 'Requiring' files in Ruby
+
+Ruby codes generally flows one-line-after-the-other. In order to organize Ruby code into files, the command 'require' calls other files. We can see this for example in the file `app.rb` when we call `require './setup'` - this "calls" the file `setup.rb` and executes all the lines in `setup.rb` before resuming execution within `app.rb`. 
+
 ## Future lessons (stuff you should know but we haven't covered)
-* Mongo 
-* 'requiring' files in Ruby 
-* get specific task 
 * JavaScript  
-* Gemfile
 * Chrome dev tools
 * favicon
 * sleep and threads 
+* Heroku 
 
 ## Addendums 
 
