@@ -2,5 +2,8 @@ set :views, Proc.new { File.join(root, "/") }
 set :public_folder, Proc.new { File.join(root, "/") }
 
 #db
-$mongo = Mongo::MongoClient.from_uri('mongodb://localhost:27017').db('rails_girls')
+DB_NAME= ENV["MONGOLAB_DB_NAME"] || ('doggie-walker')
+DB_URI = ENV["MONGOLAB_URI"] || 'mongodb://localhost:27017'
+
+$mongo = Mongo::MongoClient.from_uri(DB_URI).db(DB_NAME)
 $tasks = $mongo.collection('tasks')
