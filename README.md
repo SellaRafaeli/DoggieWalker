@@ -62,8 +62,8 @@ We will start with the file 'view.erb' which contains the HTML, which is what is
 2. Notice 'view_tasks' is called from each route handler (e.g. "get '/'") in order to return the view. Remember that in Ruby, the last expression in a function is implicitly the returned value, even if no 'return' is written. Thus within the 'view_tasks' function, the result of 'erb :views' (which is the rendered 'view.erb' HTML contents) is the value returned to the client (the browser).  
 3. So, what is "erb", exactly? 
   * "erb" is a function that calls a '.erb' file, passes it some 'local' values, and results in a rendered HTML view. In our case we call ':view' (view.erb) and pass it some local values - in this case a hash with some tasks ($tasks.find.to_a). 
-  * You'll notice that in Ruby, when we pass arguments to a function, the parentheses are optional. So 'print(123)' is the same as 'print 123'. 
-  * So, in our "erb" call, we are effectively calling "erb(:view, locals: {tasks: $tasks.find.to_a})". 
+  * In Ruby, when we pass arguments to a function, the parentheses are optional. So 'print(123)' is the same as 'print 123'. 
+  * So, in our "erb" call, we are effectively calling "erb :view, locals: {tasks: $tasks.find.to_a}". 
   ** The first argument is the symbol ':view' (If symbols are new to you, for now let's just say they're like strings but start with a ":".)
   ** The second argument is a hash. In Ruby, if the last argument of a function called is a hash, the hash brackets are optional. So 'print({a:1})' is the same as print(a:1). In our case, the last argument is hash containing a key called 'locals', whose value itself is a hash. To sum up: "erb :view, locals: {tasks: $tasks.find.to_a}" == "erb(:view, {locals: {tasks: $tasks.find.to_a}}". 
   ** Test this out by replacing the 'erb :view...' line with the equivalent expressed in the above line so you understand it. 
