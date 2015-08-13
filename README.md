@@ -272,3 +272,5 @@ Ruby codes generally flows one-line-after-the-other. In order to organize Ruby c
 The concept behind DoggieWalker is to give an aspiring web developer a complete web-app which is minimal enough that s/he can walk through and understand (with the help of this tutorial) every single line in the app, as well as the underlying technical principles of modern web development. 
 
 Guided by a working app and the tutorial, the novice developer can tweak each and every part of the application and gradually modify it, thereby learning the ins and out of dynamic web development quickly while getting both immediate feedback and gratification. 
+
+Comments, suggestions, help or requests for hands-on lessons may be addressed to sella.rafaeli@gmail.com.
