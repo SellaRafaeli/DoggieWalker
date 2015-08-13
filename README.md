@@ -11,7 +11,7 @@ If you want to learn programming the good way, let's get to it.
 Before you begin, understand that installation and setup is often one of the hardest and most frustrating parts. This is true even for experienced developers. So don't despair - take it slowly and know that everyone is evetually successful. If you pass this part successfully, the rest will be smooth sailing. 
 
 1. Learn to open your terminal. 
-2. Install Ruby, mongo, and git on your computer. You do this by googling "install Ruby/Mongo/Git", entering any of the links, and following the instructions. 
+2. Install Ruby, mongo, Sublime Text, and git on your computer. You do this by googling "install Ruby/Mongo/Git", entering any of the links, and following the instructions. 
 3. In your terminal, create a folder called 'doggieWalker' by running `mkdir doggieWalker`.
 4. Enter that folder by running `cd doggieWalker`.
 5. In that folder, download this project by running `git clone git@github.com:SellaRafaeli/DoggieWalker.git`. 
