@@ -2,7 +2,7 @@
 
 ![](http://i.imgur.com/rDNkszO.png)
 
-Info about this project can be found at the end of this file. 
+Info about this project can be found at the end of this file.
 
 If you want to learn programming the good way, let's get to it. 
 
