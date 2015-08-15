@@ -11,10 +11,11 @@ If you want to learn programming the good way, let's get to it.
 Before you begin, understand that installation and setup is often one of the hardest and most frustrating parts. This is true even for experienced developers. So don't despair - take it slowly and know that everyone is evetually successful. If you pass this part successfully, the rest will be smooth sailing. 
 
 1. Learn to open your terminal. 
-2. Install Ruby, mongo, Sublime Text, and git on your computer. You do this by googling "install Ruby/Mongo/Git", entering any of the links, and following the instructions. 
+2. Install Ruby, mongo, and Sublime Text on your computer. You do this by googling "install Ruby" (or "Install Mongo"), entering any of the links, and following the instructions. 
 3. In your terminal, create a folder called 'doggieWalker' by running `mkdir doggieWalker`.
 4. Enter that folder by running `cd doggieWalker`.
-5. In that folder, download this project by running `git clone git@github.com:SellaRafaeli/DoggieWalker.git`. 
+5. In that folder, download this project by downloading the zip file at https://github.com/SellaRafaeli/DoggieWalker/archive/master.zip, extracting the contents, and changing the folder name to `doggieWalker`.
+(If you know git, you can simple `git clone git@github.com:SellaRafaeli/DoggieWalker.git`). 
 55. Install 'bundler' by typing `gem install bundler`.
 6. Install Ruby software libraries we depend on by running `bundle install`. 
 7. Run the server by running `shotgun app.rb`. 
@@ -345,12 +346,10 @@ Awesome, you have just had your first brief introduction to JavaScript. JavaScri
 
 ## Addendums 
 
-#### Verifying Installations of Ruby, Mongo, Git
+#### Verifying Installations of Ruby and Mongo
 
 * Ruby is a programming language. Verify Ruby is installed by running `irb` in your terminal. You should see a `ruby prompt` that looks something like `2.2.1 :001 >`. We'll learn more about this later. Type 'exit' in the prompt to close it. 
 * Mongo is a database. Verify Mongo is installed by running `mongo` in your terminal. You should see a `mongo prompt` that looks something like `>`. We'll learn more about this later. Type 'exit' in the prompt to close it.`
-* Git is a source-control tool. Verify git is installed by typing `git version` in your terminal. You should see something like `git version 2.3.5`. We'll learn more about this later. 
-
 
 ## About DoggieWalker
 
