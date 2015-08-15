@@ -200,7 +200,7 @@ If you've reached this point, you've passed the basics of (web) development. Fro
 
 Also, give yourself a pat on the back; you've earned it. 
 
-## Mongo (and Databases)
+## Level 8 Mongo (and Databases)
 
 A "Database" is a program that helps us save information to the computer's disk. This information persists even if the program running it (like our app) is turned off, or if the computer itself is turned off. In our case, the database helps us manage our tasks. The database we use is called 'Mongo' (or 'MongoDB'), and it's on of the leading databases in the world. 
 
@@ -232,7 +232,7 @@ Awesomeness.
 * The database (or simply 'Mongo') is divided into 'collections' of documents. For example one collection might be a collection of 'tasks'. We can see this in the `setup.rb` file, in the line `$tasks = $mongo.collection('tasks')`. 
 * Mongo allows us to interact with the data in various ways. One common **use-case** might be to ask for a specific task from the DB, so we can view its details. We might ask for that task by its id, or by its name. Other use cases might be to ask the DB 'how many tasks do we have?', or to ask to it remove a specific task. 
 
-### Interacting with the DB (Mongo) via Tux
+## Level 9 Interacting with the DB (Mongo) via Tux
 
 Using tux, we can interact with the DB and learn a great lot about its working. Let's open up tux again (tux -c app.rb). We saw our `collection` of tasks is defined by `$tasks`. Thus we can run `$tasks.count` and see the number of tasks in the DB. Try adding and removing tasks via the web interface, and see how this number changes. Experiment with the following commands:
 * `$tasks.remove` - remove all the tasks from the DB
@@ -243,20 +243,105 @@ Using tux, we can interact with the DB and learn a great lot about its working. 
 
 Since the app and the console reflect the same DB, any changes you make in one will be reflected in the other. 
 
-## The Gemfile
+## Level 10 - the Gemfile
 
-The Gemfile - which is a file called `Gemfile` - is a file that contains a list of external Ruby projects (referred to as `gems`.) that we use. In our case we have `gems` for Sinatra, Mongo, Tux, and more. Most Ruby projects have a gemfile - this is part of the beauty of open source; other people (often private individuals) create `gems` and publish them to the world for free. In turn, we can then install these gems and use their functionality in our project for free. Gems are installed using the command `bundle install` (which in turn invokes a gem called `Bundler`, which we previously installed). Running `bundle install` creates a file called `Gemfile.lock`. The Gemfile.lock represents a resolved lists of the dependency tree of the gems - for now, you should not worry about understanding this too deeply.
+The Gemfile - which is a file called `Gemfile` - is a file that contains a list of external Ruby projects (referred to as `gems`.) that we use. In our case we have `gems` for Sinatra, Mongo, Tux, and more. Most Ruby projects have a gemfile - this is part of the beauty of open source; other people (often private individuals) create `gems` and publish them to the world for free. In turn, we can then install these gems and use their functionality in our project for free. Gems are installed using the command `bundle install` (which in turn invokes a gem called `Bundler`, which we previously installed). Running `bundle install` creates a file called `Gemfile.lock`. The Gemfile.lock represents a resolved lists of the dependency tree of the gems - for now, you should not worry about understanding this too deeply. 
 
-## 'Requiring' files in Ruby
+Let's try adding another gem. We'll be adding the 'colorize' gem, which helps us print colored output in the Ruby shell (or in tux). First, let's observe our situation before installing the gem. 
+
+Open `irb` (by typing that command in the terminal). As you remember, `irb` (short for Interactive Ruby) is a Ruby shell - it allows us to execute Ruby commands (unrelated to our web app). In `irb`, try running `"foo".red`. This is invoking the 'red' method on the string "foo", which will probably result in an error. You can also repeat this process in 'tux'. 
+
+Now, add the `colorize` gem by adding the line `gem 'colorize'` to the Gemfile and running `bundle install` in the terminal. Ensure the output of the `bundle install` instruction includes an indication that 'colorize' has been installed. If this has worked, retrying the command `"foo".red` will result in a nice print-out of 'foo' - in red color. Hooray, we've installed and used our first gem. 
+
+## Level 11 'Requiring' files in Ruby
 
 Ruby codes generally flows one-line-after-the-other. In order to organize Ruby code into files, the command 'require' calls other files. We can see this for example in the file `app.rb` when we call `require './setup'` - this "calls" the file `setup.rb` and executes all the lines in `setup.rb` before resuming execution within `app.rb`. 
 
-## Future lessons (stuff you should know but we haven't covered)
-* JavaScript  
-* Chrome dev tools
-* favicon
-* sleep and threads 
-* Heroku 
+## Level 12 - Client-Server 
+
+Now that we've gotten some "practical experience", let's discuss some theory and terminology, the core concepts of Web Development. Make sure you understand each of the following points. Like many complex topics, this is best understood holistically, so you might need to understand all the points in order to understand any of the points. 
+
+* A *server* is a computer program that answers requests. In our case, our Ruby app answers requests from the browser, and it's our server.
+* A *client* is a computer program that asks for things (makes requests from) a server. In our case, the browser makes requests to the Ruby app, and it's our client. 
+
+So, our app is divided into two parts. One part is a client (written in HTML and CSS, and later JavaScript) which is run by the browser, and makes requests to the server, which is written in Ruby. The client is often referred to as Front-End, while the server is often referred to as Back-end. Clients and Servers on the web generally communicate via HTTP requests and responses, which are long text messages they send each other. 
+
+This is a huge topic in of itself, but as an example, when you enter "www.google.com/maps" into your web browser, that executes an HTTP request for the resource "/maps" to the server at "www.google.com". The server (which might be written in Java, Ruby, C, Python, or another language) interprets the request and returns some result to the FE (Front-End), which is run by the browser. As we can see, the browser both knows how to execute HTTP requests as well as display and run the contents returned by the Back-End. 
+
+* The web generally follows a *client-server* model. A server is a process (which is basically a "computer program") which sits and waits for *requests*
+
+For further reading on this subject, study up on HTTP messages. 
+
+## Level 13 - JavaScript 
+
+As we've learned, Ruby code runs in a *process* in the back-end, creating a server that can respond to web requests and interact with the DB. In the Front-End, we can display HTML and CSS content. We will now touch upon the third major realm in the front-end: JavaScript.
+
+JavaScript is a programming language which can be executed in the browser. Whereas HTML defines the content and CSS defines the graphic design, JavaScript can be added to a web page to add front-end *behaviour*. We will learn by example. 
+
+### Dev Tools and Console 
+
+Using Chrome, open your browser's dev tools by right-clicking anywhere on the page and choosing 'Inspect Element'. This exposes the browser's dev tools, an extremely powerful tool for debugging the client. Choose the 'console' tab. This exposes a JavaScript console, similar to Ruby's `irb`. Try a few practice JavaScript commands:
+
+* `x = 10`
+* `y = 20`
+* `x+y`
+
+You get the idea. 
+
+Now, notably, JavaScript can interact with the elements in the page (in the HTML document). For example, we can execute the following command: 
+
+* `elem = document.getElementById("welcomeMsg")`. The result is the HTML element itself. We can now inspect it by calling, for example, `elem.textContent`. Even more excitingly, we can modify the contents, by calling, say, `elem.textContent = 'My New Title'`. Exciting! 
+
+Let's make that something useful by running the following lines:
+
+````
+
+elem = document.getElementById("welcomeMsg");
+name = prompt("What is your name?");
+msg  = "Hi, "+name+"!";
+elem.textContent = msg;
+
+````
+
+Cool. Now's wrap all of this stuff up in a function (still in the console):
+
+````
+
+function changeTitle() {
+  elem = document.getElementById("welcomeMsg");
+  name = prompt("What is your name?");
+  msg  = "Hi, "+name+"!";
+  elem.textContent = msg;  
+}
+
+````
+
+This declares a function, which we can now run and again, by calling `changeTitle()`.
+
+Great. We've seen how we can use the dev tools to play around with JavaScript. Now let's put some minimal JS (JavaScript) in the web page itself. 
+
+### JS in the webpage
+
+In the file view.erb, add the following snippet just before the closing `</head>` tag: 
+
+````
+
+<script>
+  function changeTitle() {
+    elem = document.getElementById("welcomeMsg");
+    name = prompt("What is your name?");
+    msg  = "Hi, "+name+"!";
+    elem.textContent = msg;  
+  }  
+</script>
+
+````
+
+This defines a JavaScript function that is available in the HTML page. Now let's add a button to enable invoking it. 
+
+After the `<h1>`, within the first `<section>`, add the following: `<button onclick='changeTitle()'>Change Title</button>`. Now try running the page and changing the title a few times. Go over the code we entered and make sure you understand exactly what it does. To test yourself, remove the button and the function and add them again manually (without copying them).
+
+Awesome, you have just had your first brief introduction to JavaScript. JavaScript is one of the world's leading programming language, and is effectively the only language in all browsers. Hence, in many ways it is "the language of the Internet", or at least the FE. There is MUCH to learn about JS (some people have an entire career in it), and this has been a taste to start. 
 
 ## Addendums 
 
