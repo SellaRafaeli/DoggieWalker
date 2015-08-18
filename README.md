@@ -10,12 +10,10 @@ If you want to learn programming the good way, let's get to it.
 
 Before you begin, understand that installation and setup is often one of the hardest and most frustrating parts. This is true even for experienced developers. So don't despair - take it slowly and know that everyone is evetually successful. If you pass this part successfully, the rest will be smooth sailing. 
 
-1. Learn to open your terminal. 
+1. Learn to open your terminal. (spotlight->'terminal' on Mac, WinKey+R->'cmd' on Windows.)
 2. Install Ruby, mongo, and Sublime Text on your computer. You do this by googling "install Ruby" (or "Install Mongo"), entering any of the links, and following the instructions. 
-3. In your terminal, create a folder called 'doggieWalker' by running `mkdir doggieWalker`.
-4. Enter that folder by running `cd doggieWalker`.
 5. In that folder, download this project by downloading the zip file at https://github.com/SellaRafaeli/DoggieWalker/archive/master.zip, extracting the contents, and changing the folder name to `doggieWalker`.
-(If you know git, you can simple `git clone git@github.com:SellaRafaeli/DoggieWalker.git`). 
+(If you know git, you can simply `git clone git@github.com:SellaRafaeli/DoggieWalker.git`). 
 55. Install 'bundler' by typing `gem install bundler`.
 6. Install Ruby software libraries we depend on by running `bundle install`. 
 7. Run the server by running `shotgun app.rb`. 
