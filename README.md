@@ -11,21 +11,22 @@ If you want to learn programming the good way, let's get to it.
 Before you begin, understand that installation and setup is often one of the hardest and most frustrating parts. This is true even for experienced developers. So don't despair - take it slowly and know that everyone is evetually successful. If you pass this part successfully, the rest will be smooth sailing. 
 
 1. Learn to open your terminal. (spotlight->'terminal' on Mac, WinKey+R->'cmd' on Windows.)
-2. Install Ruby, mongo, and Sublime Text on your computer. You do this by googling "install Ruby" (or "Install Mongo"), entering any of the links, and following the instructions. 
-5. IDownload this project by downloading the zip file at https://github.com/SellaRafaeli/DoggieWalker/archive/master.zip, extracting the contents, and changing the folder name to `doggieWalker`.
+2. Install Ruby and Sublime Text on your computer. You do this by googling "install Ruby" entering any of the links, and following the instructions. 
+21. If you can, try to install Mongo on your computer. Mongo is a database which helps us save data. You can start doggieWalker without Mongo, but you'll need it later on. 
+5. Download this project by downloading the zip file at https://github.com/SellaRafaeli/DoggieWalker/archive/master.zip, extracting the contents, and changing the folder name to `doggieWalker`.
 (If you know git, you can simply `git clone git@github.com:SellaRafaeli/DoggieWalker.git`)
 55. Install 'bundler' by typing `gem install bundler`.
 6. Install Ruby software libraries we depend on by running `bundle install`. 
-7. Run the server by running `shotgun app.rb`. 
+7. Run the server by running `ruby app.rb -p 9393`. 
 9. In your browser, browse to http://localhost:9393/ and make sure you see the TODO list manager. 
 10. Congratulations - we are up and running. 
 
 ## Running the app
 As you just saw, you run the app by typing the following in your terminal. 
 
-````$ shotgun app.rb````
+````$ ruby app.rb -p 9393````
 
-You can 'kill' the server by typing 'Ctrl-C' in the terminal, and restart it by entering 'shotgun app.rb' again in the terminal. Try it. 
+You can 'kill' the server by typing 'Ctrl-C' in the terminal, and restart it by entering 'ruby app.rb -p 9393' again in the terminal. Try it. 
 
 ## Play around 
 
@@ -33,7 +34,9 @@ Play around with the app in your browser - there's not that much to do. Add a ta
 
 ## View the source code
 
-The app's code is in the doggieWalker directory (this project). It's just a few short text files. Go through each file (there should be 8 files including this one) and understand each file's role. We'll be changing these files and learning how they define our app. Make sure you can edit these files with some text editor, such as Notepad or Notepad++ or Sublime Text. You can download each of these from the web. 
+The app's code is in the doggieWalker directory (this project). It's just a few short text files. Go through each file and understand each file's role. We'll be changing these files and learning how they define our app. Make sure you can edit these files with some text editor, such as Notepad or Notepad++ or Sublime Text. You can download each of these from the web. 
+
+DoggieWalker is the name of this project. Sinatra is the name of the *framework* we are using. 
 
 ## Edit the source code
 
@@ -41,17 +44,17 @@ We'll go through the files and make modifications to the files. After we change 
 
 ## Level 1 - Basic modifications to HTML and Ruby
 
-We will start with the file 'view.erb' which contains the HTML, which is what is displayed in our browser. After each step, reload the page and make sure you understand the effect of the changes made. 
+We will start with the file 'view.erb' which contains the HTML, which is what is displayed in our browser. After each step, reload the page and make sure you understand the effect of the changes made. Make sure you read the directions before executing them.
 
-1. Change the app header to include your name ("Welcome to Joe's TODO Manager").
-2. Change the reference to the stylesheet in the HTML from 'style.css' to 'mystyle.css'. See the style fail to load and notice the design break; now change the file's name accordingly to 'mystyle.css' and the design re-applied. 
-3. Change the title to include your name.
-4. Change the title link such that the entire title will be part of the link.
-5. Change the reference to class='rounded-corners' to 'soft-corners'. Note the loss of rounded corners on that section. Change the class name in the style.css and note the return of the round corners. Search the entire project to see if anywhere else has been affected by the change. 
-6. Observe the form to submit new tasks. Observe the action of the form. Change the action from '/add' to '/add-a-task' and observe how the functionality of adding a new task is broken. Go to app.rb and update the 'post /add' to 'post /add-a-task' and note how functionality has been restored. Note the correlation between the form's "method=post action='/add'" and the handler in app.rb ("post /add"). 
-7. Change the placeholders in the 'input' and 'textarea'. 
-8. Change the names of the parameters in the input and textarea. (From 'name=name' and 'name=description' to someting else.) Note the functionality break; go to the handler on the server ('/post add' or 'post /add-a-task') and change the parameters there accordingly.
+1. Change the main title ("Welcome to Sinatra TODO List Manager") to include your name ("Welcome to Moshe's TODO Manager"). Refresh the page and see the text change.
+11. 
+4. Notice the title contains a link, as is defined between two `<a>` tags: `<a href="/">Sinatra TODO List Manager.</a>`. Change the link in the title so that the entire title will be part of the link. Anything between `<a>` and `</a>` is a link; The link is defined to point to whatever is defined by the `href` attribute - make the link point to `https://google.com`. 
+5. On the `<body>` tag, note the text `class='body-style'`. This refers to the style defined in `style.css` by the same name (`body-style`), which defines the background-color and other attributes. Try changing the background-color defined in `body-style` to a different color (say, red). See it change. Now on the `body` tag, change the class name to something else, such as `class='body-style-2'`. Note that now the tag references a style definition that does not exist; Go into `styles.css` and  change 'body-styles' to 'body-styles-2' to see that when they match again, the styles will reapply. 
+6. Check out the the form to submit new tasks. Within `view.erb`, this form is found within the `<form>` tags. Observe the "action" attribute of the form - this tells the form "where" (in the server) to send new tasks that are submitted. Change the action value from '/add' to '/add-a-task' and observe how the functionality of adding a new task is broken. Go to app.rb and update the 'post /add' to 'post /add-a-task' and note how functionality has been restored. Note the correlation between the form's "method=post action='/add'" and the handler in app.rb ("post /add"). 
+7. Change the "placeholders" attributes' values in the 'input' and 'textarea' and see them change in the view after reloading.
+8. Change the names of the parameters in the input and textarea. (From 'name=task_name' and 'name=task_description' to something else.) Note the functionality break; go to the handler on the server ('/post add' or 'post /add-a-task') and change the parameters there accordingly.
 9. Remove the 'erb: tasks_list'. Notice how the the "tasks_list" is now missing. Return it.
+901. Note the line `<link rel="stylesheet" type="text/css" href="style.css">`. This line tells the view to include a stylesheet (which is a file to definte the graphic design/styles of the page) called "style.css". Note we have that file; look at it. Now, within the tag, change the reference to the stylesheet in the HTML from 'style.css' to 'mystyle.css', ending up with the line: `<link rel="stylesheet" type="text/css" href="mystyle.css">`. Reload the page and see that now the style fails to load; notice the design breaks. Now change the name of the file `style.css` to `mystyle.css` so the reference is correct again. Reload the page and see that the design is re-applied. 
 91. Within tasks_list.erb, change the title 'tasks' to 'my tasks'. Note how that part of the view changes. 
 10. Change the 'erb: tasks_list' to reference a separate file (e.g. 'erb: my_tasks_list').  Note the app now crashes (missing reference to sub-view). Change the name of the file (tasks_list.erb) accordingly (e.g. to 'my_tasks_list.erb') and see the change reflect accordingly. 
 

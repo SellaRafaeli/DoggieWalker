@@ -1,3 +1,4 @@
+require 'bundler'
 Bundler.require
 require './setup'
 
@@ -11,11 +12,13 @@ get '/' do
 end
 
 post '/add' do
-  $tasks.insert({name: params[:name], description: params[:description]})  
+  $tasks.insert({name: params[:task_name], description: params[:task_description]})  
   view_tasks
 end
 
 get '/delete' do
-  $tasks.remove({name: params[:name]})
+  $tasks.remove({name: params[:task_name]})
   view_tasks
 end
+
+puts "Server is now running."

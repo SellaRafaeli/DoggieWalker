@@ -5,7 +5,7 @@
     <article class='rounded-corners' style='border: 1px solid lightblue; padding: 20px; margin-bottom: 10px'>
       <b><%= task['name'] %></b>
       <p><%= task['description'] %></p>
-      <small><a href="/delete?name=<%= task['name'] %>" style='float: right'>(delete)</a></small>
+      <small><a href="/delete?task_name=<%= task['name'] %>" style='float: right'>(delete)</a></small>
     </article>
   <% end %>
   </section>
