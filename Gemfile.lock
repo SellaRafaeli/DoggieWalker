@@ -3,9 +3,7 @@ GEM
   specs:
     backports (3.6.4)
     bond (0.5.1)
-    bson (1.11.1)
-    bson_ext (1.11.1)
-      bson (~> 1.11.1)
+    bson (1.12.0)
     byebug (3.5.1)
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
@@ -14,8 +12,8 @@ GEM
     columnize (0.9.0)
     debugger-linecache (1.2.0)
     method_source (0.8.2)
-    mongo (1.11.1)
-      bson (= 1.11.1)
+    mongo (1.12.0)
+      bson (= 1.12.0)
     multi_json (1.11.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -62,10 +60,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bson_ext
-  mongo
+  mongo (= 1.12.0)
   pry-byebug
   sinatra
   sinatra-contrib
   sinatra-reloader
   tux
+
+BUNDLED WITH
+   1.10.6
