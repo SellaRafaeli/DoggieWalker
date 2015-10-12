@@ -44,10 +44,11 @@ We'll go through the files and make modifications to the files. After we change 
 
 ## Level 1 - Basic modifications to HTML and Ruby
 
+At this level, we will change the HTML which defines "the view", which is "what we we see". 
+
 We will start with the file 'view.erb' which contains the HTML, which is what is displayed in our browser. After each step, reload the page and make sure you understand the effect of the changes made. Make sure you read the directions before executing them.
 
 1. Change the main title ("Welcome to Sinatra TODO List Manager") to include your name ("Welcome to Moshe's TODO Manager"). Refresh the page and see the text change.
-11. 
 4. Notice the title contains a link, as is defined between two `<a>` tags: `<a href="/">Sinatra TODO List Manager.</a>`. Change the link in the title so that the entire title will be part of the link. Anything between `<a>` and `</a>` is a link; The link is defined to point to whatever is defined by the `href` attribute - make the link point to `https://google.com`. 
 5. On the `<body>` tag, note the text `class='body-style'`. This refers to the style defined in `style.css` by the same name (`body-style`), which defines the background-color and other attributes. Try changing the background-color defined in `body-style` to a different color (say, red). See it change. Now on the `body` tag, change the class name to something else, such as `class='body-style-2'`. Note that now the tag references a style definition that does not exist; Go into `styles.css` and  change 'body-styles' to 'body-styles-2' to see that when they match again, the styles will reapply. 
 6. Check out the the form to submit new tasks. Within `view.erb`, this form is found within the `<form>` tags. Observe the "action" attribute of the form - this tells the form "where" (in the server) to send new tasks that are submitted. Change the action value from '/add' to '/add-a-task' and observe how the functionality of adding a new task is broken. Go to app.rb and update the 'post /add' to 'post /add-a-task' and note how functionality has been restored. Note the correlation between the form's "method=post action='/add'" and the handler in app.rb ("post /add"). 
